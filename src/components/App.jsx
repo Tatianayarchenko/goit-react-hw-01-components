@@ -1,19 +1,24 @@
 import user from 'datas/user.json';
 import stats from 'datas/data.json';
+import friends from 'datas/friends.json';
 import { Profile } from 'components/Profile/Profile';
-import { Statistics } from './Statistics/Statistics';
+import { Statistics } from 'components/Statistics/Statistics';
+import { FriendList } from 'components/FriendList/FriendList';
 
 export const App = () => {
   return (
     <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
+      style={
+        {
+          // height: '100vh',
+          // display: 'flex',
+          // justifyContent: 'center',
+          // alignItems: 'center',
+          // fontSize: 40,
+          // color: '#010101',
+          // color: 'rgb(245, 236, 236)',
+        }
+      }
     >
       <Profile
         username={user.username}
@@ -24,6 +29,7 @@ export const App = () => {
       />
       <Statistics title="Upload stats" stats={stats} />
       <Statistics stats={stats} />
+      <FriendList friends={friends} />;
     </div>
   );
 };
