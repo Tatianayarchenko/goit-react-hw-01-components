@@ -5,8 +5,7 @@ export const Table = styled.table`
   width: 600px;
   box-shadow: 1px 1px 3px #b19f9f;
   border-radius: 5px;
-  /* border-collapse: collapse; */
-  /* overflow: hidden; */
+
 `;
 
 export const TableHead = styled.thead`

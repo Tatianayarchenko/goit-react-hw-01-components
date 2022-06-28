@@ -10,17 +10,15 @@ import { TransactionHistory } from 'components/TransactionHistory/TransactionHis
 export const App = () => {
   return (
     <div
-      style={
-        {
-          // height: '100vh',
-          // display: 'flex',
-          // justifyContent: 'center',
-          // alignItems: 'center',
-          // fontSize: 40,
-          // color: '#010101',
-          // color: 'rgb(245, 236, 236)',
-        }
-      }
+      style={{
+        // height: '100vh',
+        // display: 'flex',
+        // justifyContent: 'center',
+        // alignItems: 'center',
+        // fontSize: 40,
+        // color: '#010101',
+        padding: 30,
+      }}
     >
       <Profile
         username={user.username}
