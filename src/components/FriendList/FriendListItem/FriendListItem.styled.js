@@ -19,13 +19,7 @@ export const FriendStatus = styled.span`
   border-radius: 50%;
   margin: 15px;
   background-color: #000000;
-  background-color: ${props => {
-    console.log(props.children);
-    if (props.children) {
-      return 'red';
-    }
-    return 'green';
-  }};
+  background-color: ${p => (p.isOnline ? 'red' : 'green')};
 `;
 
 export const FriendsImgStyles = styled.img`
@@ -34,7 +28,4 @@ export const FriendsImgStyles = styled.img`
   margin-right: 15px;
 `;
 
-export const FriendsNameStyles = styled.p`
-  /* display: flex;
-  align-items: center; */
-`;
+export const FriendsNameStyles = styled.p``;

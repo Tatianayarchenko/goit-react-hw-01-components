@@ -9,12 +9,7 @@ import {
 export const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
     <FriendsItemStyles>
-      {/* {isOnline ? (
-        <FriendStatus>{isOnline}</FriendStatus>
-      ) : (
-        <span>offline</span>
-      )} */}
-      <FriendStatus>{isOnline}</FriendStatus>
+      <FriendStatus isOnline={isOnline} />
       <FriendsImgStyles src={avatar} alt="User avatar" width="48" />
       <FriendsNameStyles>{name}</FriendsNameStyles>
     </FriendsItemStyles>

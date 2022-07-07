@@ -7,23 +7,19 @@ import {
   Label,
   Percentage,
 } from './Statistics.styled';
+import { getRandomHexColor } from '../Utils/getRandomHexColor';
 
 export const Statistics = ({ title, stats }) => {
   return (
     <Section>
       {title && <Title>{title}</Title>}
       <StatisticsName>
-        {stats.map(({ id, label, percentage }) => {
-          const getRandomHexColor = function () {
-            return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-          };
-          return (
-            <Item key={id} style={{ backgroundColor: getRandomHexColor() }}>
-              <Label>{label}</Label>
-              <Percentage>{percentage}%</Percentage>
-            </Item>
-          );
-        })}
+        {stats.map(({ id, label, percentage }) => (
+          <Item key={id} style={{ backgroundColor: getRandomHexColor() }}>
+            <Label>{label}</Label>
+            <Percentage>{percentage}%</Percentage>
+          </Item>
+        ))}
       </StatisticsName>
     </Section>
   );
